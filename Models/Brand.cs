@@ -9,11 +9,9 @@ namespace CarShop.Models
         [Required]
         [MinLength(1)]
         public string Name { get; set; }
-        public HashSet<Model> Models { get; set; }
 
         public Brand()
         {
-            Models = new HashSet<Model>();
         }
     }
 }
