@@ -17,5 +17,11 @@ namespace CarShop.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+
+        public DbSet<Manager> Managers { get; set; }
+        public DbSet<Deal> Deals { get; set; }
+        public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Model> Models { get; set; }
     }
 }
