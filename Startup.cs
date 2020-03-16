@@ -50,6 +50,7 @@ namespace CarShop
             });
 
             services.AddScoped<DealService, DealService>();
+            services.AddScoped<ManagerService, ManagerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
