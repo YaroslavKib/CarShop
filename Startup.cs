@@ -11,6 +11,7 @@ using CarShop.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using CarShop.Services;
 
 namespace CarShop
 {
@@ -47,6 +48,8 @@ namespace CarShop
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            services.AddScoped<DealService, DealService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
