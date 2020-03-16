@@ -25,14 +25,24 @@ namespace CarShop.Controllers
         [HttpPost]
         public ActionResult Post(Deal deal)
         {
-            throw new NotImplementedException();
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            var result = _service.Create(deal);
+            
+            return Ok(result);
         }
 
         // GET /api/deal/5
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
-            throw new NotImplementedException();
+            var result = _service.GetDeal(id);
+
+            if (result == null)
+                return NotFound();
+            
+            return Ok(result);
         }
     }
 }
